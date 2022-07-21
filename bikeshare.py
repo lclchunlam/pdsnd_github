@@ -88,12 +88,11 @@ def time_stats(df):
     # TO DO: display the most common month
     df['month'] = df['Start Time'].dt.month
     popular_month = df['month'].mode()[0]
-    print('Most Frequent Start Month:', popular_month)
-
+    print('Most Frequent Start Month: {}'.format(popular_month))
     # TO DO: display the most common day of week
     df['day'] = df['Start Time'].dt.day_name()
     popular_day = df['day'].mode()[0]
-    print('Most Frequent Start Day of Week:', popular_day)
+    print('Most Frequent Start Day of Week: {}'.format(popular_day))
 
     # TO DO: display the most common start hour
     # extract hour from the Start Time column to create an hour column
@@ -113,7 +112,7 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     popular_start_station = df['Start Station'].mode()[0]
-    print('Most Commonly Used Start Station:', popular_start_station)
+    print('Most Commonly Used Start Station: {}'.format(popular_start_station))
 
     # TO DO: display most commonly used end station
     popular_end_station = df['End Station'].mode()[0]
